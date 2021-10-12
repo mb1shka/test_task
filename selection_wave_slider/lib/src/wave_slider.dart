@@ -347,15 +347,15 @@ class WaveSliderState extends State<WaveSlider>
           ),
           //if (isMoving)
             AnimatedPositioned(
-                top: isMoving ? 0 : 18,
+                top: isMoving ? 0 : 20,
                 bottom: 0,
                 left: _dragPosition - 18,
                 duration: Duration(milliseconds: isMoving ? 1 : 100),
                 child: Center(
                     child: Container(
                   color: Colors.transparent,
-                  height: objectRadius * 1.8,
-                  width: objectRadius * 1.8,
+                  height: objectRadius * 1.7,
+                  width: objectRadius * 1.7,
                   padding: EdgeInsets.all(objectPadding),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(objectRadius),

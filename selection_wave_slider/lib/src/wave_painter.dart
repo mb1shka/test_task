@@ -80,19 +80,22 @@ class WavePainter extends CustomPainter {
         _paintSlidingWave(canvas, restrictedSize);
         break;
       case SliderState.resting:
-        _paintSlidingWave(canvas, restrictedSize);
+        //_paintSlidingWave(canvas, restrictedSize);
+        _paintRestingWave(canvas, restrictedSize);
         break;
       case SliderState.sliding:
         _paintSlidingWave(canvas, restrictedSize);
         break;
       case SliderState.stopping:
-        _paintSlidingWave(canvas, restrictedSize);
+        _paintRestingWave(canvas, restrictedSize);
+        //_paintSlidingWave(canvas, restrictedSize);
         break;
       case SliderState.initial:
         _paintRestingWave(canvas, restrictedSize);
         break;
       default:
-        _paintSlidingWave(canvas, restrictedSize);
+        //_paintSlidingWave(canvas, restrictedSize);
+        _paintRestingWave(canvas, restrictedSize);
         break;
     }
   }

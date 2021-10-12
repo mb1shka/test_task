@@ -61,6 +61,9 @@ class _MyAppState extends State<MyApp> {
                             optionToChoose: showInteger(),
                             onSelected: (value) {
                               print(value);
+                              setState(() {
+                                weightStatus = changeWeightStatus(value+37)!;
+                              });
                             }
                         ),
                         Padding(
@@ -120,5 +123,15 @@ class _MyAppState extends State<MyApp> {
       list.add(i.toString());
     }
     return list;
+  }
+
+  WeightStatus? changeWeightStatus(int value) {
+    if (value <= 65) {
+      return WeightStatus.Underweight;
+    } else if (value > 65 && value < 95) {
+      return WeightStatus.Balanced;
+    } else if (value >= 95) {
+      return WeightStatus.Overweight;
+    }
   }
 }
